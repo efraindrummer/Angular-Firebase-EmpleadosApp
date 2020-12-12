@@ -56,7 +56,7 @@ export class CreateEmpleadoComponent implements OnInit {
       console.log(error);
       this.loading = false;
       this.toastr.error('Disculpa Hubo un error!!', 'error', {
-        positionClass: 'toast-bottom-right'
+        positionClass: 'toast-mensajes de error al agregar -right'
       });
     })
   }
