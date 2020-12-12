@@ -4,17 +4,18 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h3>Agregar Empleado</h3>
-                    <form class="mt-5">
+                    <span *ngIf="submitted && createEmpleado.invalid" class="badge badge-danger">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form class="mt-5" [formGroup]="createEmpleado" (ngSubmit)="agregarEmpleado()">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="nombre">
+                                <input type="text" class="form-control" formControlName="nombre" placeholder="nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="apellido">
+                                <input type="text" class="form-control" formControlName="apellido" placeholder="apellido">
                             </div>
                         </div>
-                        <input type="text" class="form-control mt-3" placeholder="documento">
-                        <input type="text" class="form-control mt-3" placeholder="salario">
+                        <input type="text" class="form-control mt-3" formControlName="documento" placeholder="documento">
+                        <input type="number" class="form-control mt-3" formControlName="salario" placeholder="salario">
                         <div class="mt-3">
                             <button type="text" class="btn btn-secondary mr-3" routerLink="/list-empleados">Atras</button>
                             <button type="submit" class="btn btn-info">Agregar</button>

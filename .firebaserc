@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "efraindrummer-page-pwa": {
+      "hosting": {
+        "empleados-app": [
+          "efraindrummer-page-pwa"
+        ]
+      }
+    },
+    "empleados-app-b3673": {
+      "hosting": {
+        "empleados-app": [
+          "empleados-app-b3673"
+        ]
+      }
+    }
+  }
+}
