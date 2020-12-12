@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "empleados-app"
+  "defaultProject": "empleados-app",
+  "cli": {
+    "analytics": "d76ee35d-7cfa-459d-b2eb-dfe50d606cb1"
+  }
 }
