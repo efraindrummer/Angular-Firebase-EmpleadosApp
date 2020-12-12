@@ -1,27 +1,29 @@
 # EmpleadosApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Este proyecto esta generado por  [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+clonar el repositorio con el comando `git clone https://github.com/efraindrummer/Angular-Firebase-EmpleadosApp.git`.
 
-## Development server
+## Iniciar server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+correr con el comando `ng serve` para levantar el servidor. Navega a `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+para lanzar a produccion corre el comando `ng build --prod`. ve a la carpeta dist y alli estara la aplicacion lista para despliegue
 
-## Running unit tests
+# Deploy en netlify
+https://musing-raman-bf3247.netlify.app/list-empleados
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Autor
 
-## Running end-to-end tests
+Efrain May Mayo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Tecnologias usadas
 
-## Further help
+Angular 11
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Typescript
+
+Boostrap 4
+
+Backend = firebase
