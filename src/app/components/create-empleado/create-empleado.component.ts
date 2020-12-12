@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { EmpleadoService } from 'src/app/services/empleado.service';
 
 @Component({
   selector: 'app-create-empleado',
@@ -10,7 +13,12 @@ export class CreateEmpleadoComponent implements OnInit {
 
   createEmpleado: FormGroup;
   submitted = false;
-  constructor(private fb: FormBuilder) { 
+  loading = false;
+  
+  constructor(private fb: FormBuilder, 
+              private _empleadoService: EmpleadoService, 
+              private router: Router, 
+              private toastr: ToastrService) { 
     this.createEmpleado = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
@@ -37,7 +45,20 @@ export class CreateEmpleadoComponent implements OnInit {
       fechaCreacion: new Date(),
       fechaActualizacion: new Date()
     }
-    console.log(empleado);
+    this.loading = true;
+    this._empleadoService.agregarEmpleado(empleado).then(()=>{
+      this.toastr.success('Empleado registrado exitosamente!!', 'registrado', {
+        positionClass: 'toast-bottom-right'
+      });
+      this.loading = false;
+      this.router.navigate(['/list-empleados']);
+    }).catch(error => {
+      console.log(error);
+      this.loading = false;
+      this.toastr.error('Disculpa Hubo un error!!', 'error', {
+        positionClass: 'toast-bottom-right'
+      });
+    })
   }
 
 }

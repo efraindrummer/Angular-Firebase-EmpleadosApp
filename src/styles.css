@@ -1,3 +1,4 @@
+@import '~ngx-toastr/toastr';
 body {
     background-image: url(assets/angular.jpg);
     background-repeat: no-repeat;
